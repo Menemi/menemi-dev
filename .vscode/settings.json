@@ -1,0 +1,15 @@
+{
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontSize": 16,
+  "editor.fontFamily": "JetBrains Mono NL SemiBold, 'JetBrains Mono NL SemiBold', sans-serif",
+  "editor.mouseWheelZoom": true,
+  "editor.tabSize": 2,
+  "window.zoomLevel": 0,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace"
+  }
+}

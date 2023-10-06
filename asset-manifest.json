@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/menemi-dev/static/css/main.37f6cb3a.css",
+    "main.js": "/menemi-dev/static/js/main.f64be93f.js",
+    "index.html": "/menemi-dev/index.html",
+    "main.37f6cb3a.css.map": "/menemi-dev/static/css/main.37f6cb3a.css.map",
+    "main.f64be93f.js.map": "/menemi-dev/static/js/main.f64be93f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37f6cb3a.css",
+    "static/js/main.f64be93f.js"
+  ]
+}

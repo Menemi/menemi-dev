@@ -5,8 +5,8 @@ export default function Footer() {
     <footer>
       <p>Copyright © 2023. All rights are reserved</p>
       <div>
-        <i class="bx bxl-github"></i>
-        <i class="bx bxl-telegram"></i>
+        <i className="bx bxl-github"></i>
+        <i className="bx bxl-telegram"></i>
       </div>
     </footer>
   );

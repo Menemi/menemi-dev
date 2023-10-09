@@ -365,7 +365,7 @@ section .reversed {
 .project-stack:hover {
   color: var(--black-highlight);
   border: 2px solid var(--black-highlight);
-  cursor: pointer;
+  cursor: default;
 }
 
 .none-selectable {
@@ -448,6 +448,15 @@ footer p {
 
   .project-info {
     min-height: 225px;
+  }
+
+  .experience-container h3,
+  .education-container h3,
+  .contacts-container h3,
+  .job-info h4,
+  .education-info h4,
+  .project-name {
+    text-align: center;
   }
 }
 

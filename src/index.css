@@ -13,6 +13,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :root {
   --header-height: 100px;
   --header-font-weight: 800;
@@ -51,7 +56,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100dvw;
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -263,12 +268,6 @@ section .reversed {
   color: var(--blue-highlight);
 }
 
-.contacts-icon {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  padding: 0.25rem;
-}
-
 .contacts-unit-description {
   display: flex;
   flex-direction: column;
@@ -407,8 +406,17 @@ footer p {
   color: var(--blue-highlight);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1300px) {
+  .project-info {
+    width: max-content;
+  }
 
+  .project-unit {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1300px) {
   .project-unit,
   .project-unit.reversed {
     flex-direction: column;

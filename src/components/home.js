@@ -23,7 +23,7 @@ export default function Home() {
       </div>
       <div className="home-stack-container">
         <p>Навыки</p>
-        <i class="bx bx-dots-vertical-rounded" />
+        <i class="bx bx-dots-vertical-rounded home-stack-delimiter" />
         <div className="home-stack">
           <div className="home-stack-block-icons">
             <i className="bx bxl-html5 bx-lg black-icon" />

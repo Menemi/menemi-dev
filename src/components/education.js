@@ -6,7 +6,7 @@ export default function Education() {
       <div className="education-container">
         <h3 className="highlight-text">Образование — неоконченное высшее</h3>
         <div className="education-unit reversed">
-          <img src="images/itmo.png" alt="kreativ-logo" className="job-logo none-selectable" />
+          <img src="images/itmo.png" alt="kreativ-logo" className="education-logo none-selectable" />
           <div className="education-info">
             <div>
               <h4 className="highlight-text">Университет ИТМО [2020 — 2024]</h4>

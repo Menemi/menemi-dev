@@ -3,10 +3,10 @@ import React from "react";
 export default function Footer() {
   return (
     <footer>
-      <p>Copyright © 2023. All rights are reserved</p>
-      <div>
-        <i className="bx bxl-github"></i>
-        <i className="bx bxl-telegram"></i>
+      <p>Menemi © 2023</p>
+      <div className="footer-icons">
+        <a href="https://github.com/Menemi" target="_blanc"><i className="bx bxl-github bx-lg btn" /></a>
+        <a href="https://t.me/Menemi" target="_blanc"><i className="bx bxl-telegram bx-lg btn" /></a>
       </div>
     </footer>
   );

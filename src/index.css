@@ -36,6 +36,17 @@ html {
   border-radius: 20px;
 }
 
+.navigation {
+  transition: all 0.5s;
+  width: 100dvw;
+  height: 100dvh;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -50,6 +61,41 @@ header {
   font-weight: var(--header-font-weight);
   padding: 25px 40px;
   z-index: 999;
+}
+
+.header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.header-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-container {
+  height: 100%;
+  flex-direction: column;
+  align-items: center
+}
+
+.menu-btn {
+  display: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.menu-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.nav-item {
+  margin-top: 3rem;
+  font-size: 24px;
 }
 
 .header-title {
@@ -121,7 +167,7 @@ section {
 }
 
 .home-avatar {
-  width: 25%;
+  width: 300px;
   border: 3px solid var(--black-highlight);
   border-radius: 3rem;
 }
@@ -139,7 +185,7 @@ section {
 }
 
 .home-stack-container {
-  width: calc(30% + 25% + 2rem);
+  width: calc(30% + 300px + 2rem);
   gap: 2rem;
 }
 
@@ -169,12 +215,14 @@ section {
 }
 
 .experience-container,
-.education-container {
+.education-container,
+.contacts-container {
   width: 60%;
 }
 
 .experience-container h3,
-.education-container h3 {
+.education-container h3,
+.contacts-container h3 {
   font-size: 28px;
   text-transform: uppercase;
   color: var(--black-highlight);
@@ -186,7 +234,8 @@ section .reversed {
 }
 
 .job-unit,
-.education-unit {
+.education-unit,
+.project-unit {
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -195,10 +244,59 @@ section .reversed {
   gap: 1rem;
 }
 
-.job-logo {
+.project-unit {
+  min-height: 300px;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 3rem;
+}
+
+.contacts-unit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contacts-list a p:hover {
+  color: var(--blue-highlight);
+}
+
+.contacts-icon {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0.25rem;
+}
+
+.contacts-unit-description {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.contacts-unit-description h4 {
+  font-size: 20px;
+}
+
+.job-logo,
+.education-logo {
   width: 250px;
   height: 250px;
   border-radius: 1rem;
+}
+
+.project-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.project-logo {
+  width: fit-content;
+  height: 250px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  filter: grayscale(1);
 }
 
 .job-info,
@@ -206,6 +304,19 @@ section .reversed {
   display: flex;
   flex-direction: column;
   height: 250px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-unit-desription {
+  text-align: center;
+  max-width: 350px;
 }
 
 .job-info {
@@ -229,12 +340,12 @@ section .reversed {
   line-height: normal;
 }
 
-.job-stack-container {
+.job-stack-container,
+.project-stack-container {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  height: 35px;
 }
 
 .job-stack-logo {
@@ -243,10 +354,179 @@ section .reversed {
   height: 35px;
 }
 
+.project-stack {
+  color: var(--gray-highlight);
+  width: max-content;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+  border: 2px solid var(--gray-highlight);
+}
+
+.project-stack:hover {
+  color: var(--black-highlight);
+  border: 2px solid var(--black-highlight);
+  cursor: pointer;
+}
+
 .none-selectable {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+.project-name {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #4c4c4c;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-icons .btn {
+  color: #ffffff;
+}
+
+.footer-icons .btn:hover {
+  color: var(--blue-highlight);
+}
+
+@media screen and (max-width: 1300px) {
+
+  .project-unit,
+  .project-unit.reversed {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .contacts-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .education-unit,
+  .job-unit,
+  .education-unit.reversed,
+  .job-unit.reversed {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-unit {
+    min-height: 225px;
+  }
+
+  .project-logo-container {
+    display: none;
+  }
+
+  .project-info {
+    min-height: 225px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .home-header {
+    flex-direction: column-reverse;
+  }
+
+  .home-title {
+    align-items: center;
+    width: 60%;
+  }
+
+  .home-title p {
+    text-align: center;
+  }
+
+  .header-container {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-stack {
+    flex-direction: column;
+  }
+
+  .home-stack-delimiter {
+    display: none;
+  }
+
+  .home-stack-container {
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .job-logo {
+    display: none;
+  }
+
+  .nav-container {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 710px) {
+  .education-logo {
+    display: none;
+  }
+
+  .education-unit,
+  .education-unit.reversed {
+    min-height: 450px;
+  }
+
+  .education-unit,
+  .job-unit,
+  .education-unit.reversed,
+  .job-unit.reversed {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .job-stack-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .project-stack-container {
+    margin: 0.5rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .job-unit,
+  .job-unit.reversed {
+    min-height: 450px;
+  }
 }

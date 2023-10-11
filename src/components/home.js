@@ -1,6 +1,29 @@
 import React from "react";
 
 export default function Home() {
+  const stackIcons = [
+    {
+      firstIcon: <i className="bx bxl-html5 bx-lg black-icon" />,
+      secondIcon: <i className="bx bxl-css3 bx-lg black-icon" />
+    },
+    {
+      firstIcon: <i className="bx bxl-javascript bx-lg black-icon" />,
+      secondIcon: <i className="bx bxl-typescript bx-lg black-icon" />
+    },
+    {
+      firstIcon: <i className="bx bxl-react bx-lg black-icon" />,
+      secondIcon: <i className="bx bxl-angular bx-lg black-icon" />
+    },
+    {
+      firstIcon: <img src="images/c-sharp.svg" alt="c-sharp" className="lg-icon none-selectable" />,
+      secondIcon: <i className="bx bxl-python bx-lg black-icon" />
+    },
+    {
+      firstIcon: <i className="bx bxl-c-plus-plus bx-lg black-icon" />,
+      secondIcon: <i className="bx bxl-java bx-lg black-icon" />
+    },
+  ]
+
   return (
     <section id="home">
       <div className="home-header">
@@ -25,26 +48,14 @@ export default function Home() {
         <p>Навыки</p>
         <i class="bx bx-dots-vertical-rounded home-stack-delimiter" />
         <div className="home-stack">
-          <div className="home-stack-block-icons">
-            <i className="bx bxl-html5 bx-lg black-icon" />
-            <i className="bx bxl-css3 bx-lg black-icon" />
-          </div>
-          <div className="home-stack-block-icons">
-            <i className="bx bxl-javascript bx-lg black-icon" />
-            <i className="bx bxl-typescript bx-lg black-icon" />
-          </div>
-          <div className="home-stack-block-icons">
-            <i className="bx bxl-react bx-lg black-icon" />
-            <i className="bx bxl-angular bx-lg black-icon" />
-          </div>
-          <div className="home-stack-block-icons">
-            <img src="images/c-sharp.svg" alt="c-sharp" className="lg-icon none-selectable" />
-            <i className="bx bxl-python bx-lg black-icon" />
-          </div>
-          <div className="home-stack-block-icons">
-            <i className="bx bxl-c-plus-plus bx-lg black-icon" />
-            <i className="bx bxl-java bx-lg black-icon" />
-          </div>
+          {
+            stackIcons.map((item, index) => (
+              <div className="home-stack-block-icons" key={index}>
+                {item.firstIcon}
+                {item.secondIcon}
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>

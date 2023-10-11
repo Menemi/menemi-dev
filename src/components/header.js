@@ -31,11 +31,13 @@ export default function Header() {
       <header style={{ display: isOpen ? "none" : "flex" }}>
         <h2 className="header-title highlight-text">Menemi.dev</h2>
         <div className="header-container">
-          <a href="#home" className="btn nav-btn highlight-text">Главная</a>
-          <a href="#experience" className="btn nav-btn highlight-text">Опыт работы</a>
-          <a href="#education" className="btn nav-btn highlight-text">Образование</a>
-          <a href="#projects" className="btn nav-btn highlight-text">Проекты</a>
-          <a href="#contacts" className="btn nav-btn highlight-text">Контакты</a>
+          {
+            navItem.map((item, index) => (
+              <a href={item.path} key={index} className="btn nav-btn highlight-text">
+                {item.name}
+              </a>
+            ))
+          }
         </div>
 
         <i class="bx bx-menu bx-md menu-btn" onClick={toggle} />

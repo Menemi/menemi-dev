@@ -13,7 +13,8 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -417,6 +418,7 @@ footer p {
 }
 
 @media screen and (max-width: 1300px) {
+
   .project-unit,
   .project-unit.reversed {
     flex-direction: column;
@@ -542,6 +544,7 @@ footer p {
 }
 
 @media screen and (max-width: 500px) {
+
   .job-unit,
   .job-unit.reversed {
     min-height: 450px;

@@ -250,8 +250,8 @@ section .reversed {
   gap: 1rem;
 }
 
-.project-unit {
-  min-height: 300px;
+.project-unit.big-logo {
+  height: 300px;
 }
 
 .contacts-list {
@@ -289,14 +289,29 @@ section .reversed {
 .project-logo-container {
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+
+.no-align {
+  align-items: normal;
 }
 
 .project-logo {
   width: fit-content;
   height: 250px;
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   filter: grayscale(1);
+}
+
+.project-logo.slide {
+  width: 500px;
+  height: auto;
+  transform: translateY(0%);
+  transition: transform 3s ease-in-out 0s;
+}
+
+.project-logo.slide:hover {
+  transform: translateY(-67%);
 }
 
 .job-info,
@@ -417,12 +432,15 @@ footer p {
   }
 }
 
-@media screen and (max-width: 1300px) {
-
+@media screen and (max-width: 1530px) {
   .project-unit,
   .project-unit.reversed {
     flex-direction: column;
     align-items: center;
+  }
+
+  .project-unit.big-logo {
+    height: 485px;
   }
 }
 
@@ -446,6 +464,10 @@ footer p {
 
   .project-logo-container {
     display: none;
+  }
+
+  .project-unit.big-logo {
+    height: auto;
   }
 
   .project-info {

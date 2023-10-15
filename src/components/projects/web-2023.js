@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Web2023() {
   return (
-    <div className="project-unit">
+    <div className="project-unit reversed">
       <div className="project-logo-container">
         <a href="https://github.com/Menemi/IS-2023-web-6-sem" target="_blanc">
           <box-icon type="logo" name="github" size="250px" color="#00000" class="project-logo"></box-icon>

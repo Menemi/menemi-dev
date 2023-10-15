@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Web2022() {
   return (
-    <div className="project-unit reversed">
+    <div className="project-unit">
       <div className="project-logo-container">
         <a href="https://menemi.github.io/IS-2022-web-5-sem/" target="_blanc">
           <img src="images/web-2022.png" alt="web-2022" className="project-logo none-selectable" />

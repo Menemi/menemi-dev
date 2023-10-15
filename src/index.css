@@ -307,7 +307,7 @@ section .reversed {
   width: 500px;
   height: auto;
   transform: translateY(0%);
-  transition: transform 3s ease-in-out 0s;
+  transition: transform 10s ease-in-out 0s;
 }
 
 .project-logo.slide:hover {

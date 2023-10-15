@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/menemi-dev/static/css/main.85b7090a.css",
-    "main.js": "/menemi-dev/static/js/main.97e8b82b.js",
+    "main.css": "/menemi-dev/static/css/main.104a6bbb.css",
+    "main.js": "/menemi-dev/static/js/main.6563d330.js",
     "index.html": "/menemi-dev/index.html",
-    "main.85b7090a.css.map": "/menemi-dev/static/css/main.85b7090a.css.map",
-    "main.97e8b82b.js.map": "/menemi-dev/static/js/main.97e8b82b.js.map"
+    "main.104a6bbb.css.map": "/menemi-dev/static/css/main.104a6bbb.css.map",
+    "main.6563d330.js.map": "/menemi-dev/static/js/main.6563d330.js.map"
   },
   "entrypoints": [
-    "static/css/main.85b7090a.css",
-    "static/js/main.97e8b82b.js"
+    "static/css/main.104a6bbb.css",
+    "static/js/main.6563d330.js"
   ]
 }

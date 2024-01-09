@@ -172,10 +172,17 @@ section {
   font-size: 18px;
 }
 
-.home-avatar {
+.avatar-container {
   width: 300px;
+  height: 300px;
+  overflow: hidden;
   border: 3px solid var(--black-highlight);
   border-radius: 3rem;
+}
+
+.home-avatar {
+  width: 300px;
+  overflow: hidden;
 }
 
 .home-contacts {
